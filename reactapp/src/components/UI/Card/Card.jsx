@@ -15,7 +15,7 @@ const Card = (props) => {
   return (
     <div className="card">
       <h4>{props.question}</h4>
-      <div className="button">
+      <div className="Button">
         <Button
           disabled={disabled}
           onClick={() => check(props.options.option1)}
