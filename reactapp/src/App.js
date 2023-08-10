@@ -1,8 +1,6 @@
-import { useState } from "react";
-
+import React, { useState } from "react";
 import "./App.css";
 import Banner from "./components/UI/Banner/Banner";
-
 import Button from "./components/UI/Button/Button";
 import Card from "./components/UI/Card/Card";
 import questions from "./Data/data";
@@ -12,7 +10,7 @@ function App() {
   const [end, setEnd] = useState(false);
   const [questionsCorrect, setQuestionsCorrect] = useState(0);
 
-  const startTest = () => {
+  const StartQuiz = () => {
     setQuestionsCorrect(0);
     setStart(true);
   };
@@ -24,7 +22,7 @@ function App() {
     }
   }
 
-  function showResults() {
+  function ShowResults() {
     setStart(false);
     setEnd(true);
   }
@@ -64,14 +62,14 @@ function App() {
               }
             )}
           </div>
-          <Button onClick={showResults}>{"Show results"}</Button>
+          <Button onClick={ShowResults}>{'Show Results'}</Button>
         </div>
       ) : (
         <div className="end">
           {end && (
             <Banner>You have answered {questionsCorrect} / 5 Correctly</Banner>
           )}
-          <Button onClick={startTest}>{"Start Quiz"}</Button>
+          <Button onClick={StartQuiz}>{'Start Quiz'}</Button>
         </div>
       )}
     </div>
