@@ -24,7 +24,7 @@ function App() {
     }
   }
 
-  function showResults() {
+  function ShowResults() {
     setStart(false);
     setEnd(true);
   }
@@ -64,14 +64,14 @@ function App() {
               }
             )}
           </div>
-          <Button onClick={showResults}>{"Show results"}</Button>
+          <Button onClick={ShowResults}>{'Show Results'}</Button>
         </div>
       ) : (
         <div className="end">
           {end && (
             <Banner>You have answered {questionsCorrect} / 5 Correctly</Banner>
           )}
-          <Button onClick={startTest}>{"Start Quiz"}</Button>
+          <Button onClick={startTest}>{'Start Quiz'}</Button>
         </div>
       )}
     </div>
